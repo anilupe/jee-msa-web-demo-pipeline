@@ -162,13 +162,13 @@ stages:
 # ==========================================
   # STAGE 5: NUEVO STAGE (PRUEBAS)
   # ==========================================
-  - stage: Nuevo Stage
+  - stage: Pruebas
     displayName: 'Pruebas'
     dependsOn: [CI, Approval, CD]
     condition: always()
     jobs:
       - job: probar
-        displayName: 'Probar stage'
+        displayName: 'Pruebas'
         steps:
           - script: |
               echo "Prueba de añadir stage construido por Ana Pereira: $(Agent.JobStatus)"
